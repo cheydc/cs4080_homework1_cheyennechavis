@@ -1,0 +1,11 @@
+var x = 0;
+
+fun bump() { x = x + 1; return true; }
+fun nope() { x = x + 100; return false; }
+
+print (nope() and bump()); // bump should not run
+print x;
+
+x = 0;
+print (bump() or nope());  // nope should not run
+print x;
